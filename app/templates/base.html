@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=0.1">
+        <meta property="og:title" content="Personal Portfolio">
+        <meta property="og:description" content="My Personal Portfolio">
+        <meta property="og:url" content="{{ url }}">
+
+        <!-- Font Import -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet"> 
+
+        <!-- Styling -->
+        <link lang='sass' rel="stylesheet" href="./static/styles/main.css">
+        <link rel='icon' href='./static/img/favicon.ico' type='image/x-icon' />
+        <title>{{ username }}</title>
+    
+        <!-- Other -->
+        {% block extra_head %}
+        {% endblock %}
+    </head>
+
+    <body>
+        <div class="all-body">
+            <div class="nav-bar">
+                <a class="nav-choice" href="/"> 
+                    <div class="user">
+                        <div id="user-picture" class="user-picture">
+                            <img src="{{ pfp_url }}">
+                        </div>
+                        <h1>{{ username }}</h1>
+                    </div>
+
+                </a>
+                <div class="nav-content">
+                    <a class="nav-choice" href="/about"><button class="nav-button">About</button></a>
+                    <a class="nav-choice" href="/hobbies"><button class="nav-button">Hobbies</button></a>
+                    <a class="nav-choice" href="/adventures"><button class="nav-button">Adventures</button></a>
+                    <a class="nav-choice" href="/work-xp"><button class="nav-button">Work Experience</button></a>
+                </div>
+            </div>
+
+            <div class="main-content">
+                {% block content %}{% endblock %}
+            </div>
+        </div>
+    </body>
+</html>
