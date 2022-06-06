@@ -1,0 +1,58 @@
+function updateDescription(name){
+  let all = getJSONGroup(locations, "name", name);
+  document.getElementById("loc_name").innerHTML = name;
+  document.getElementById("loc_desc").innerHTML = all.description;
+
+}
+
+function getJSONGroup(array, key, value) {
+  return array.filter((object) => {
+      return object[key] === value;
+  })[0];
+};
+
+function onClick() {
+    const locName = this.getPopup().getContent();
+    updateDescription(locName);  
+}
+
+
+locations = [
+  {
+    "name": "University of Illinois Urbana-Champaign",
+    "lat": 40.101036944462656,
+    "lon": -88.22715929623348,
+    "description": "Also known as UIUC, I've visited this college in my high school days, to compete it state math competitions. I found the campus to be massive (with presence in virtually of the town) and filled with many distinct places to visit."
+  },
+  {
+    "name": "Massachusetts Institute of Technology",
+    "lat": 42.35923645128002,
+    "lon": -71.09312817324027,
+    "description": "More frequently referred to as MIT, MIT is a place I consider my second home. I'm currently studying here for my B.S. degree in computer science. I love the scenery and easy access to the greater Boston area, where there are many things to do."
+  },
+  {
+    "name": "Boston Seaport",
+    "lat": 42.350828263308024,
+    "lon": -71.04657135754447,
+    "description": "Boston's Seaport area has a nice view to the ocean. It also has cool places like the Insitutute of Contemporary Art and Taiyaki NYC ice cream."
+  },
+  {
+    "name": "Morton East Highschool",
+    "lat": 41.84640285982475,
+    "lon": -87.773107728585,
+    "description": "This is the high school I attended for 4 years. Although there's nothing particularly special about it, the teachers and friends I met here were amazing."
+  }
+]
+
+
+function loadLocations() {
+  for(let index=0; index < locations.length; index++){
+      let popupText = locations[index].name
+      let coord = [locations[index].lat, locations[index].lon];
+      let newLoc = new L.marker(coord).bindPopup(popupText).addTo(map).on('click', onClick);
+  }
+}
+
+loadLocations();
+
+

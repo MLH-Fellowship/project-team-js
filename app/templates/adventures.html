@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block extra_head %}
+  <!-- Leaflet Imports -->
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+  <!-- End of Imports -->
+  <link rel="stylesheet" href="./static/styles/map.css">
+{% endblock %}
+
+
+{% block content %}
+  <h1>Adventures</h1>
+
+  <p>In the map below you can find out about cool places that I've visitied. If you click on one of them, the name and a 
+  small description about it will be shown down below.</p>
+
+  <div id="map"></div>
+  <p><b>Location: </b> <span id="loc_name">(none)</span></p>
+  <p><b>Description: </b> <span id="loc_desc">(none)</span></p>
+
+  <script src="./static/scripts/main.js"></script>
+  <script src="./static/scripts/locations.js"></script>
+
+{% endblock %}
