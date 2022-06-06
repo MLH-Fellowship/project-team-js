@@ -13,7 +13,30 @@ Feel free to look around by using the sidebar to peak into specific sections.
 """
 
 about_blurb = """
-<p>(about me)</p>
+<h2>Personal Background</h2>
+<p>
+I grew up in a suburb town on the outskirts of Chicago, IL, known as <a href="https://en.wikipedia.org/wiki/Cicero,_Illinois">Cicero</a>. My parents are <a href="https://en.wikipedia.org/wiki/Blue-collar_worker">blue-collar workers</a> and come from a poor socioeconomic background.
+Now in college, I primarily live in the greater Boston area.
+</p>
+
+<p>
+Outside work, I enjoy playing Nintendo video games, learning the piano, learning more about GNU/Linux, and visiting new places, which you can read more about in my hobbies page.
+I am also huge a supporter of the Free/Libre Software movement, and use open source software whenever possible.
+</p>
+
+
+<h2>Education</h2>
+<p>
+I am a rising Junior majoring in Computer Science at MIT. My main interests lie in system software & operating system engineering but I'm continuously exploring.
+Through my journey at MIT, I've expanded my programming knowledge through an algorithmic and structural lens. I've also learned the programming languages of Python, TypeScript, C, and webdev.
+At MIT I've also been a part of a few research groups, as detailed in the work experience page.
+</p>
+
+<h2>Contact</h2>
+<p>
+The most reliable way to reach me is via e-mail, at <code>javsolis@mit.edu</code>.
+</p>
+</p>
 """
 
 hobbies = [
@@ -26,7 +49,7 @@ hobbies = [
 
 work_xp = [
     {'name': 'Undergraduate Research on Networking',
-    'tags': ["Entertainment"],
+    'tags': ["research"],
     'start_date': "February, 2021",
     'end_date': "Present",
     'description': "In this research position at the Networks and Mobile Systems group (NMS) at the MIT Computer Science & Artificial Intelligence Laboratory (CSAIL) , I ...",
