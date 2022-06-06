@@ -40,9 +40,29 @@ The most reliable way to reach me is via e-mail, at <code>javsolis@mit.edu</code
 """
 
 hobbies = [
-    {'name':'Nintendo Video Games',
-    'tags': ["Entertainment"],
-    'description': "I enjoy playing Nintendo Video Games.",
+    {'name':'Gaming',
+    'tags': ["entertainment"],
+    'description': "I enjoy playing video games, and primarily those made by Nintendo and indie developers. When I was younger, I spent hours a day playing titles like The Legend of Zelda: Breath of the Wild, Splatoon 2, and Super Mario Odyssey. These days there's less time for long gaming sessions and I've come to play more shorter multiplayer games from series like Mario Kart and Mario Party. I also used to play a lot of Kerbal Space Program, a game where you can make your own rockets and visit planets.",
+    'picture_urls': [""]
+    },
+    {'name':'Praticing the Piano',
+    'tags': ["entertainment"],
+    'description': "I've recently gotten into practicing the piano, with MIT having so many. I've primarily been learning video game songs such as Megalovania (from Undertale) and Lost Woods (from the Zelda series)",
+    'picture_urls': [""]
+    },
+    {'name':'Listening to Podcasts',
+    'tags': ["recreational", "informative"],
+    'description': "I've also recently gotten into listening to podcasts from various people/groups and getting to learn new persperctives.",
+    'picture_urls': [""]
+    },
+    {'name':'Learning More GNU/Linux',
+    'tags': ["educational"],
+    'description': "Since last year, I've become interested in learning all there is to know about GNU/Linux. To that avail, I often some of my free time learning new terminal commands & Linux components and trying out new Linux distros and versions.",
+    'picture_urls': [""]
+    },
+    {'name':'Exploring',
+    'tags': ["recreational"],
+    'description': "I enjoy exploring new places. I picked this up upon arriving to MIT, where the greater Boston area has lots to discover. I enjoy biking while traveling, when possible.",
     'picture_urls': [""]
     }
 ]
