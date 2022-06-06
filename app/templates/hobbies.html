@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+    <h1>Hobbies</h1>
+
+    {% for hobby in hobbies_info %}
+
+        <h2>{{hobby.name}}</h2>
+            <p><b>Tag(s):</b>{% for tag in hobby.tags %}tag {% endfor %}</p>
+            <p>{{hobby.description}}</p>
+        <h3>Picture(s)</h3>
+            {% for pic in hobby.picture_urls %}
+                <img src="{{pic}}"></img>
+            {% endfor %}
+    {% endfor %}
+{% endblock %}
