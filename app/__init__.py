@@ -68,11 +68,25 @@ hobbies = [
 ]
 
 work_xp = [
-    {'name': 'Undergraduate Research on Networking',
-    'tags': ["research"],
-    'start_date': "February, 2021",
+    {'name': 'Interconnected Embedded Systems Lab Assistant',
+    'roles': ["Assistant"],
+    'start_date': "February, 2022",
+    'end_date': "May, 2022",
+    'description': "Answering student questions throughout in-class lab, and carrying out 'checkoffs' with students, holding discussions that verify that they understand lab material. Serving a classroom with over 90 students, for 5 hours a week.",
+    'picture_urls': [""]
+    },
+    {'name': 'Passive Measurement of Video Conferencing Quality',
+    'roles': ["Researcher"],
+    'start_date': "February, 2022",
     'end_date': "Present",
-    'description': "In this research position at the Networks and Mobile Systems group (NMS) at the MIT Computer Science & Artificial Intelligence Laboratory (CSAIL) , I ...",
+    'description': "Investigating the impact that different network factors have on video calling quality, like intermittent packet loss & lower bandwidth. Enhancing my research group's existing measurement software by developing processes that can parse network-level video ",
+    'picture_urls': [""]
+    },
+    {'name': 'Engineering Design Workshop',
+    'roles': ["Mentor"],
+    'start_date': "June, 2021",
+    'end_date': "August, 2021",
+    'description': "Lead mentor and coordinator for 4 innovative high school engineering workshops held in Houston, San Francisco, Miami, and New Orleans. Each month-long workshop had 6-12 participants who worked in small teams on self-selected projects. The innovation was that 7 newly admitted MIT first-year students ran these programs in their respective high schools, with remote support from MIT.",
     'picture_urls': [""]
     }
 ]

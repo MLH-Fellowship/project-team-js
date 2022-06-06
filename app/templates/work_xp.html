@@ -6,8 +6,11 @@
 
     {% for xp in work_xp_info %}
         <h2>{{xp.name}}</h2>
-            <p><b>Tag(s): </b>{% for tag in xp.tags %}tag {% endfor %}</p>
-            <p><b>Dates: </b>{{ xp.start_date}} – {{xp.end_date}}</p>
+        <p><b>Roles(s):</b>
+            {% for role in xp.roles %}
+            {{role}}, 
+            {% endfor %}</p>
+        <p><b>Dates: </b>{{ xp.start_date}} – {{xp.end_date}}</p>
 
             <p>{{xp.description}}</p>
         <h3>Picture(s)</h3>
