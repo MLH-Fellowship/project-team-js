@@ -39,7 +39,7 @@ adventures = [
 
 user={
     "name": "Javier Solis",
-    "pfp_url": "./static/img/logo.jpg", #pfp stands for "profile picture" 
+    "pfp_url": "https://drive.google.com/uc?export=view&id=1QyUK0PH-O1QKsDtw2tMDmtn3WRBrAeGw", #pfp stands for "profile picture" 
     "intro_blurb": intro_blurb,
     "about_blurb": about_blurb,
     "hobbies": hobbies,

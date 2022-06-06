@@ -13,16 +13,13 @@ body {
 
 .nav-bar {
     text-align: center;
-
     height: 100%;
-    width: 10%;
+    width: 12%;
     background-color: #1C539F;
     font-family: 'Source Sans Pro', sans-serif;
     padding-top: 10px;
     position: fixed;
     overflow: auto;
-
-
 }
 
 .nav-content {
@@ -34,13 +31,13 @@ body {
 }
 
 .user h1 {
-        font-size: 25px;
-        font-weight: 500;
+        font-size: 30px;
+        font-weight: 700;
         color: white;
 }
 
 .user img {
-        border-radius: 50%;
+        border-radius: 40%;
         max-width: 100%;
         max-height: 100%;
         margin-left: auto;
@@ -50,23 +47,23 @@ body {
 }
 
 .user .user-picture {
-    margin-bottom: 30px;
-    height: 100px;
+    margin-bottom: 40px;
+    height: 140px;
+    
 }
-
-
-/* My Additions: */
 
 .nav-button {
     width: 90%;
-    background-color: #5881ba;
+
+    font-weight: 600;
+    background-color: #4790f8;
     border: none;
     color:  white;
-    padding: 16px 32px;
+    padding: 10px 15px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
+    font-size: 18px;
     margin: 4px 2px;
     transition-duration: 0.4s;
     cursor: pointer;
@@ -75,7 +72,7 @@ body {
 
 .nav-button:hover {
 background-color: white;
-color: #1d539f;
+color: #4790f8;
 }
 
 .all-body {
@@ -85,14 +82,13 @@ color: #1d539f;
 
 .main-content{
     padding-top: 2%;
-    padding-right: 5%;
-    
-    padding-left: 5%;
+    padding-right: 3%;
+    padding-left: 3%;
     color:black;
     background-color: white;
     height: 100%;
     width:100%;
-    margin-left: 10%;
+    margin-left: 12%;
 }
 
 a {
