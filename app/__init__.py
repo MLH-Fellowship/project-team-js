@@ -7,29 +7,28 @@ app = Flask(__name__)
 
 
 intro_blurb="""
-Hi! My name is Javier Solis and I'm a junior at MIT learning computer science.
-Some of my interests include Nintendo gaming, all-things GNU/Linux, writing, and exploring.
+Hi! My name is Javier Solis, and I'm a rising junior at MIT learning computer science.
+Some of my interests include gaming, all-things GNU/Linux, writing, and exploring.
 Feel free to look around by using the sidebar to peak into specific sections. 
 """
 
 about_blurb = """
 <h2>Personal Background</h2>
 <p>
-I grew up in a suburb town on the outskirts of Chicago, IL, known as <a href="https://en.wikipedia.org/wiki/Cicero,_Illinois">Cicero</a>. My parents are <a href="https://en.wikipedia.org/wiki/Blue-collar_worker">blue-collar workers</a> and come from a poor socioeconomic background.
-Now in college, I primarily live in the greater Boston area.
+I grew up in a suburb town on the outskirts of Chicago. Now in college, I primarily live in the greater Boston area.
 </p>
 
 <p>
-Outside work, I enjoy playing Nintendo video games, learning the piano, learning more about GNU/Linux, and visiting new places, which you can read more about in my hobbies page.
-I am also huge a supporter of the Free/Libre Software movement, and use open source software whenever possible.
+Outside work, I enjoy playing video games, learning the piano, learning more about GNU/Linux, and visiting new places, which you can read more about in my hobbies page.
+I am also huge a supporter of the Free/Libre/Open Software movement, and I use open source software as much as possible.
 </p>
 
 
 <h2>Education</h2>
 <p>
 I am a rising Junior majoring in Computer Science at MIT. My main interests lie in system software & operating system engineering but I'm continuously exploring.
-Through my journey at MIT, I've expanded my programming knowledge through an algorithmic and structural lens. I've also learned the programming languages of Python, TypeScript, C, and webdev.
-At MIT I've also been a part of a few research groups, as detailed in the work experience page.
+Through my journey at MIT, I've expanded my software knowledge through an understanding of algorithmic and structural principles. I've also learned the programming languages of Python, TypeScript, C, and webdev.
+At MIT, I've also been a part of a few research groups, as detailed in the work experience page, as well as the computer club known as <a href="https://sipb.mit.edu/">SIPB</a>
 </p>
 
 <h2>Contact</h2>
@@ -42,12 +41,12 @@ The most reliable way to reach me is via e-mail, at <code>javsolis@mit.edu</code
 hobbies = [
     {'name':'Gaming',
     'tags': ["entertainment"],
-    'description': "I enjoy playing video games, and primarily those made by Nintendo and indie developers. When I was younger, I spent hours a day playing titles like The Legend of Zelda: Breath of the Wild, Splatoon 2, and Super Mario Odyssey. These days there's less time for long gaming sessions and I've come to play more shorter multiplayer games from series like Mario Kart and Mario Party. I also used to play a lot of Kerbal Space Program, a game where you can make your own rockets and visit planets.",
+    'description': "I enjoy playing video games, primarily those made by Nintendo and indie developers. Some of my favorite titles include The Legend of Zelda: Breath of the Wild, Splatoon 2, and Super Mario Odyssey. I also used to play a lot of Kerbal Space Program, a game where you can make your own rockets and visit planets.",
     'picture_urls': [""]
     },
     {'name':'Praticing the Piano',
     'tags': ["entertainment"],
-    'description': "I've recently gotten into practicing the piano, with MIT having so many. I've primarily been learning video game songs such as Megalovania (from Undertale) and Lost Woods (from the Zelda series)",
+    'description': "I've recently gotten into practicing the piano, with MIT having so many. I've primarily been learning video game songs such as Megalovania (from Undertale).",
     'picture_urls': [""]
     },
     {'name':'Listening to Podcasts',
@@ -68,25 +67,25 @@ hobbies = [
 ]
 
 work_xp = [
-    {'name': 'Interconnected Embedded Systems Lab Assistant',
+    {'name': 'Embedded Systems Class',
     'roles': ["Assistant"],
     'start_date': "February, 2022",
     'end_date': "May, 2022",
-    'description': "Answering student questions throughout in-class lab, and carrying out 'checkoffs' with students, holding discussions that verify that they understand lab material. Serving a classroom with over 90 students, for 5 hours a week.",
+    'description': "Answering student questions throughout in-class lab, and carrying out 'checkoffs' with students, holding discussions that verify that they understand lab material.",
     'picture_urls': [""]
     },
     {'name': 'Passive Measurement of Video Conferencing Quality',
     'roles': ["Researcher"],
     'start_date': "February, 2022",
     'end_date': "Present",
-    'description': "Investigating the impact that different network factors have on video calling quality, like intermittent packet loss & lower bandwidth. Enhancing my research group's existing measurement software by developing processes that can parse network-level video ",
+    'description': "Investigating the impact that different network factors have on video calling quality, like intermittent packet loss & lower bandwidth.",
     'picture_urls': [""]
     },
     {'name': 'Engineering Design Workshop',
     'roles': ["Mentor"],
     'start_date': "June, 2021",
     'end_date': "August, 2021",
-    'description': "Lead mentor and coordinator for 4 innovative high school engineering workshops held in Houston, San Francisco, Miami, and New Orleans. Each month-long workshop had 6-12 participants who worked in small teams on self-selected projects. The innovation was that 7 newly admitted MIT first-year students ran these programs in their respective high schools, with remote support from MIT.",
+    'description': "Lead mentor and coordinator for 4 innovative high school engineering workshops held in Houston, San Francisco, Miami, and New Orleans. Each month-long workshop had 6-12 participants who worked in small teams on self-selected projects.",
     'picture_urls': [""]
     }
 ]
@@ -103,7 +102,6 @@ user={
     "work_xp": work_xp,
     "adventures": adventures, # TODO: Implement this feature in this file, instead of in locations.hs
 }
-
 
 
 @app.route('/')
