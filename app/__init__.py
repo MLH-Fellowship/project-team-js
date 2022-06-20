@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 
 intro_blurb="""
-Hi! My name is Javier Solis, and I'm a rising junior at MIT learning computer science.
+Hi! My name is Javier Solis, and I'm a rising junior at the Massachusetts Institute of Technology learning computer science.
 Some of my interests include gaming, all-things GNU/Linux, writing, and exploring.
 Feel free to look around by using the sidebar to peak into specific sections. 
 """
@@ -15,7 +15,7 @@ Feel free to look around by using the sidebar to peak into specific sections.
 about_blurb = """
 <h2>Personal Background</h2>
 <p>
-I grew up in a suburb town on the outskirts of Chicago. Now in college, I primarily live in the greater Boston area.
+I grew up in a suburban town on the outskirts of Chicago. Now in college, I primarily live in the Greater Boston Area.
 </p>
 
 <p>
