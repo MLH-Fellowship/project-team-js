@@ -1,7 +1,13 @@
+from dataclasses import dataclass
+from email.policy import default
 import os
+from typing import Text
 from flask import Flask, render_template, request
 from dotenv import load_dotenv
 from peewee import * 
+from datetime import datetime
+from pymysql import Time
+from playhouse.shortcuts import model_to_dict
 
 load_dotenv()
 app = Flask(__name__)
@@ -13,6 +19,18 @@ my_db = MySQLDatabase(os.getenv("MYSQL_DATABASE"),
         port=3306)
 
 print(my_db)
+
+class TimelinePost(Model):
+    name = CharField()
+    email = CharField()
+    content = TextField()
+    created_at = DateTimeField(default=datetime.now)
+
+    class Meta:
+        database = my_db
+
+my_db.connect()
+my_db.create_tables([TimelinePost])
 
 intro_blurb="""
 Hi! My name is Javier Solis, and I'm a rising Junior at the Massachusetts Institute of Technology learning computer science.
@@ -131,3 +149,17 @@ def work_xp_page():
 @app.route('/adventures')
 def adventures_page():
     return render_template('adventures.html', username=user["name"], pfp_url=user["pfp_url"])
+
+
+@app.route('/api/timeline_post', methods=['POST'])
+def post_time_line_post():
+    name = request.form['name']
+    email = request.form['email']
+    content = request.form['content']
+    timeline_post = TimelinePost.create(name=name, email=email, content = content)
+
+    return model_to_dict(timeline_post)
+
+@app.route('/api/timeline_post', methods=['GET'])
+def get_time_line_post():
+    return {'timeline_posts': [model_to_dict(p) for p in TimelinePost.select().order_by(TimelinePost.created_at.desc())]}
