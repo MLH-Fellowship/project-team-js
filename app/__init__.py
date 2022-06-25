@@ -1,10 +1,18 @@
 import os
 from flask import Flask, render_template, request
 from dotenv import load_dotenv
+from peewee import * 
 
 load_dotenv()
 app = Flask(__name__)
 
+my_db = MySQLDatabase(os.getenv("MYSQL_DATABASE"),
+        user=os.getenv("MYSQL_USER"),
+        password=os.getenv("MYSQL_PASSWORD"),
+        host=os.getenv("MYSQL_HOST"),
+        port=3306)
+
+print(my_db)
 
 intro_blurb="""
 Hi! My name is Javier Solis, and I'm a rising Junior at the Massachusetts Institute of Technology learning computer science.
