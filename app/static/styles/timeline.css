@@ -1,0 +1,44 @@
+#mainContainer{
+    margin: 100px 0px, 100px, 0px; /* top, right, bottom, left */
+    display: flex;
+}
+
+/* Form Side */
+#form {
+    font-family: monospace;
+    font-size: 20px;
+    margin-right: 100px;
+}
+div#form p { 
+    font-size: inherit; 
+    font-family: inherit;
+}
+.flatTextBox {
+    width: 30ch;
+}
+.midTextBox {
+    resize: none;
+    width: 30ch;
+    height: 4em;
+}
+.dataFormat {
+    font-family: monospace;
+    font-size: 18px;
+}
+
+/* Timeline Side */
+#timeline{
+    margin-bottom: 100px;
+    flex-grow: 1;
+}
+
+#mainTable {
+    border: 1px solid;
+}
+table#mainTable table, th, td {
+    border: 1px solid;
+
+    font-family: monospace;
+    font-size: 12px;
+    padding: 4px;
+}
