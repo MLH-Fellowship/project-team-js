@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block extra_head %}
+<link rel="stylesheet" href="./static/styles/timeline.css">
+{% endblock %}
+
+{% block content %}
+    <h1>Timeline</h1>
+
+    <div id="mainContainer">
+        <div class="form">
+            <p>Name</p>
+            <input type="text" id="nameBox" class="flatTextBox dataFormat" maxlength="30">
+            </br>
+            <p>Email</p>
+            <input type="text" id="emailBox" class="flatTextBox dataFormat" maxlength="30">
+            </br>
+            <p>Content</p>
+            <textarea class="midTextBox dataFormat" maxlength="90"></textarea>
+            </br>
+            <button id="enterButton">Enter</button>
+        </div>
+
+        <div class="timeline">
+            <table id="mainTable"></table>
+        </div>
+    </div>
+
+    <script src="./static/scripts/timeline.js"></script>
+{% endblock %}
