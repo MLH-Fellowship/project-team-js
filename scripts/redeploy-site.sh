@@ -1,9 +1,13 @@
 #!/bin/bash
 
 cd ~/project-team-js;
+
 git fetch && git reset origin/main --hard;
-chmod +x ~/project-team-js/scripts/deploy_commands.sh;
+
+python -m venv python3-virtualenv;
+source python3-virtualenv/bin/activate;
+pip install -r requirements.txt;
+
 systemctl stop myportfolio
-bash ~/project-team-js/scripts/deploy_commands.sh
 systemctl daemon-reload
 systemctl restart myportfolio
