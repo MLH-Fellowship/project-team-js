@@ -8,9 +8,12 @@ from peewee import *
 from datetime import datetime
 from pymysql import Time
 from playhouse.shortcuts import model_to_dict
+import re
 
 load_dotenv()
 app = Flask(__name__)
+
+EMAIL_REGEX = "^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$"
 
 if os.getenv("TESTING") == "true":
     print("Running in test mode")
@@ -160,6 +163,14 @@ def post_time_line_post():
     name = request.values.get('name')
     email = request.values.get('email')
     content = request.values.get('content')
+    
+    if name == None or name == str():
+        return "Invalid name", 400
+    if content == None or content == str():
+        return "Invalid content", 400
+    if not re.match(EMAIL_REGEX, email):
+        return "Invalid email", 400
+    
     timeline_post = TimelinePost.create(name=name, email=email, content = content)
 
     return model_to_dict(timeline_post)
