@@ -157,9 +157,9 @@ def adventures_page():
 
 @app.route('/api/timeline_post', methods=['POST'])
 def post_time_line_post():
-    name = request.form['name']
-    email = request.form['email']
-    content = request.form['content']
+    name = request.values.get('name')
+    email = request.values.get('email')
+    content = request.values.get('content')
     timeline_post = TimelinePost.create(name=name, email=email, content = content)
 
     return model_to_dict(timeline_post)
