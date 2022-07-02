@@ -52,4 +52,9 @@ class AppTestCase(unittest.TestCase):
         assert "timeline_posts" in json_after
         assert len(json_after['timeline_posts']) == 2
         assert json_after['timeline_posts'][0]['name'] == 'Jane Doe'
-        # TODO: Add more tests relating to the timeline page
+        # Retrieve Timeline page
+        response_tl = self.client.get('/timeline')
+        assert response_tl.status_code == 200
+        html_tl = response_tl.get_data(as_text=True)
+        assert "<title>Javier Solis</title>" in html_tl
+        assert "<div id=\"timeline\">" in html_tl
