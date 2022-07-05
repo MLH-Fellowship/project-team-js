@@ -179,6 +179,12 @@ def post_time_line_post():
 def get_time_line_post():
     return {'timeline_posts': [model_to_dict(p) for p in TimelinePost.select().order_by(TimelinePost.created_at.desc())]}
 
+@app.route('/api/timeline_post', methods=['DELETE'])
+def delete_time_line_post():
+    id = request.form['id']
+    my_db.execute(TimelinePost.delete().where(TimelinePost.id == id))
+    return {'id': id}
+
 @app.route('/timeline')
 def timeline():
     return render_template('timeline.html', username=user["name"], pfp_url=user["pfp_url"], title="Timeline")
