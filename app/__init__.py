@@ -1,5 +1,6 @@
 from dataclasses import dataclass
 from email.policy import default
+import json
 import os
 from typing import Text
 from flask import Flask, render_template, request
@@ -38,6 +39,10 @@ class TimelinePost(Model):
 
 my_db.connect()
 my_db.create_tables([TimelinePost])
+
+
+# References to all the data
+locations = json.load(open("./app/static/data/locations.json"))
 
 intro_blurb="""
 Hi! My name is Javier Solis, and I'm a rising Junior at the Massachusetts Institute of Technology learning computer science.
@@ -156,6 +161,10 @@ def work_xp_page():
 @app.route('/adventures')
 def adventures_page():
     return render_template('adventures.html', username=user["name"], pfp_url=user["pfp_url"])
+
+@app.route('/adventures/locations', methods=['GET'])
+def get_adventures_locations():
+    return locations
 
 
 @app.route('/api/timeline_post', methods=['POST'])

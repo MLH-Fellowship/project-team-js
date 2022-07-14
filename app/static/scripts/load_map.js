@@ -15,7 +15,6 @@ function main() {
   
   // show the scale bar on the lower left corner
   L.control.scale({imperial: true, metric: true}).addTo(map);
-
 };
 
-main();
+void main();
