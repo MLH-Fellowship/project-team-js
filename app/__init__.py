@@ -48,7 +48,7 @@ Feel free to look around by using the sidebar to peak into specific sections.
 about_blurb = """
 <h2>Personal Background</h2>
 <p>
-I grew up in a suburban town on the outskirts of Chicago. Now in college, I primarily live in the Greater Boston Area.
+I grew up in a suburban town outside of Chicago. Now in college, I primarily live in the Greater Boston Area.
 </p>
 
 <p>
