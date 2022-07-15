@@ -14,6 +14,11 @@
 {% block content %}
 <div class="about_blurb">
     <h1>About</h1>
-    {{about_blurb|safe}}
+    
+    {% for key, value in about_blurb.items() %}
+        <h2>{{key}}</h2>
+        <p>{{value|safe}}</p>
+    {% endfor %}
+
 </div>
 {% endblock %}

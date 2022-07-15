@@ -1,0 +1,7 @@
+{   
+    "about_blurb" : {
+        "Personal Background" : "I grew up in a suburban town outside of Chicago. Now in college, I primarily live in the Greater Boston Area. </br> Outside work, I enjoy playing video games, learning the piano, learning more about GNU/Linux, and visiting new places, which you can read more about in my hobbies page. I am also huge a supporter of the Free/Libre/Open Software movement, and I use open source software as much as possible.",
+        "Education" : "I am a rising Junior majoring in Computer Science at MIT. My main interests lie in system software & operating system engineering but I'm continuously exploring. Through my journey at MIT, I've expanded my software knowledge through an understanding of algorithmic and structural principles. I've also learned the programming languages of Python, TypeScript, C, and webdev. At MIT, I've also been a part of a few research groups, as detailed in the work experience page, as well as the computer club known as <a href=\"https://sipb.mit.edu/\">SIPB</a>",
+        "Contact": "The most reliable way to reach me is via e-mail, at <code>javsolis@mit.edu</code>"
+    }
+}

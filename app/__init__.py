@@ -44,37 +44,9 @@ my_db.create_tables([TimelinePost])
 # References to all the data
 locations = json.load(open("./app/static/data/locations.json"))
 
-intro_blurb="""
-Hi! My name is Javier Solis, and I'm a rising Junior at the Massachusetts Institute of Technology learning computer science.
-Some of my interests include gaming, all-things GNU/Linux, writing, and exploring.
-Feel free to look around by using the sidebar to peak into specific sections. 
-"""
+intro_blurb= json.load(open("./app/static/data/intro_blurb.json"))["intro_blurb"]
 
-about_blurb = """
-<h2>Personal Background</h2>
-<p>
-I grew up in a suburban town outside of Chicago. Now in college, I primarily live in the Greater Boston Area.
-</p>
-
-<p>
-Outside work, I enjoy playing video games, learning the piano, learning more about GNU/Linux, and visiting new places, which you can read more about in my hobbies page.
-I am also huge a supporter of the Free/Libre/Open Software movement, and I use open source software as much as possible.
-</p>
-
-
-<h2>Education</h2>
-<p>
-I am a rising Junior majoring in Computer Science at MIT. My main interests lie in system software & operating system engineering but I'm continuously exploring.
-Through my journey at MIT, I've expanded my software knowledge through an understanding of algorithmic and structural principles. I've also learned the programming languages of Python, TypeScript, C, and webdev.
-At MIT, I've also been a part of a few research groups, as detailed in the work experience page, as well as the computer club known as <a href="https://sipb.mit.edu/">SIPB</a>
-</p>
-
-<h2>Contact</h2>
-<p>
-The most reliable way to reach me is via e-mail, at <code>javsolis@mit.edu</code>.
-</p>
-</p>
-"""
+about_blurb = json.load(open("./app/static/data/about_blurb.json"))["about_blurb"]
 
 hobbies = [
     {'name':'Gaming',
