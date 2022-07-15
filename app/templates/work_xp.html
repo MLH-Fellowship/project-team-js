@@ -6,16 +6,15 @@
 
     {% for xp in work_xp_info %}
         <h2>{{xp.name}}</h2>
-        <p><b>Roles(s):</b>
-            {% for role in xp.roles %}
-            {{role}}, 
-            {% endfor %}</p>
+        <p><b>Roles(s):</b> {% for role in xp.roles %}{{role}} {% endfor %}</p>
         <p><b>Dates: </b>{{ xp.start_date}} – {{xp.end_date}}</p>
-
             <p>{{xp.description}}</p>
-        <h3>Picture(s)</h3>
-            {% for pic in xp.picture_urls %}
-                <img src="{{pic}}"></img>
-            {% endfor %}
+
+        {% if (xp.picture_urls is defined) and xp.picture_urls %}
+            <h3>Picture(s)</h3>
+                {% for pic in xp.picture_urls %}
+                    <img src="{{pic}}"></img>
+                {% endfor %}
+        {% endif %}
     {% endfor %}
 {% endblock %}

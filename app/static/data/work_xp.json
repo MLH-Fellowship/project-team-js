@@ -1,0 +1,29 @@
+{
+    "work_xp" : [
+        {
+            "name": "Embedded Systems Class",
+            "roles": ["Assistant"],
+            "start_date": "February, 2022",
+            "end_date": "May, 2022",
+            "description": "Answering student questions throughout in-class lab, and carrying out 'checkoffs' with students, holding discussions that verify that they understand lab material.",
+            "picture_urls": []
+        },
+        {
+            "name": "Passive Measurement of Video Conferencing Quality",
+            "roles": ["Researcher"],
+            "start_date": "February, 2022",
+            "end_date": "Present",
+            "description": "Investigating the impact that different network factors have on video calling quality, like intermittent packet loss & lower bandwidth.",
+            "picture_urls": []
+        },
+        {
+            "name": "Engineering Design Workshop",
+            "roles": ["Mentor"],
+            "start_date": "June, 2021",
+            "end_date": "August, 2021",
+            "description": "Lead mentor and coordinator for 4 innovative high school engineering workshops held in Houston, San Francisco, Miami, and New Orleans. Each month-long workshop had 6-12 participants who worked in small teams on self-selected projects.",
+            "picture_urls": []
+        }
+    ]
+
+}

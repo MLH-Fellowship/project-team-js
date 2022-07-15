@@ -43,62 +43,10 @@ my_db.create_tables([TimelinePost])
 
 # References to all the data
 locations = json.load(open("./app/static/data/locations.json"))
-
 intro_blurb= json.load(open("./app/static/data/intro_blurb.json"))["intro_blurb"]
-
 about_blurb = json.load(open("./app/static/data/about_blurb.json"))["about_blurb"]
-
-hobbies = [
-    {'name':'Gaming',
-    'tags': ["entertainment"],
-    'description': "I enjoy playing video games, primarily those made by Nintendo and indie developers. Some of my favorite titles include The Legend of Zelda: Breath of the Wild, Splatoon 2, and Super Mario Odyssey. I also used to play a lot of Kerbal Space Program, a game where you can make your own rockets and visit planets.",
-    'picture_urls': [""]
-    },
-    {'name':'Praticing the Piano',
-    'tags': ["entertainment"],
-    'description': "I've recently gotten into practicing the piano, with MIT having so many. I've primarily been learning video game songs such as Megalovania (from Undertale).",
-    'picture_urls': [""]
-    },
-    {'name':'Listening to Podcasts',
-    'tags': ["recreational", "informative"],
-    'description': "I've also recently gotten into listening to podcasts from various people/groups and getting to learn new persperctives.",
-    'picture_urls': [""]
-    },
-    {'name':'Learning More GNU/Linux',
-    'tags': ["educational"],
-    'description': "Since last year, I've become interested in learning all there is to know about GNU/Linux. To that avail, I often some of my free time learning new terminal commands & Linux components and trying out new Linux distros and versions.",
-    'picture_urls': [""]
-    },
-    {'name':'Exploring',
-    'tags': ["recreational"],
-    'description': "I enjoy exploring new places. I picked this up upon arriving to MIT, where the greater Boston area has lots to discover. I enjoy biking while traveling, when possible.",
-    'picture_urls': [""]
-    }
-]
-
-work_xp = [
-    {'name': 'Embedded Systems Class',
-    'roles': ["Assistant"],
-    'start_date': "February, 2022",
-    'end_date': "May, 2022",
-    'description': "Answering student questions throughout in-class lab, and carrying out 'checkoffs' with students, holding discussions that verify that they understand lab material.",
-    'picture_urls': [""]
-    },
-    {'name': 'Passive Measurement of Video Conferencing Quality',
-    'roles': ["Researcher"],
-    'start_date': "February, 2022",
-    'end_date': "Present",
-    'description': "Investigating the impact that different network factors have on video calling quality, like intermittent packet loss & lower bandwidth.",
-    'picture_urls': [""]
-    },
-    {'name': 'Engineering Design Workshop',
-    'roles': ["Mentor"],
-    'start_date': "June, 2021",
-    'end_date': "August, 2021",
-    'description': "Lead mentor and coordinator for 4 innovative high school engineering workshops held in Houston, San Francisco, Miami, and New Orleans. Each month-long workshop had 6-12 participants who worked in small teams on self-selected projects.",
-    'picture_urls': [""]
-    }
-]
+hobbies = json.load(open("./app/static/data/hobbies.json"))["hobbies"]
+work_xp = json.load(open("./app/static/data/work_xp.json"))["work_xp"]
 
 adventures = [
 ]
@@ -112,7 +60,6 @@ user={
     "work_xp": work_xp,
     "adventures": adventures, # TODO: Implement this feature in this file, instead of in locations.hs
 }
-
 
 @app.route('/')
 def index():
