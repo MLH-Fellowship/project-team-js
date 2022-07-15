@@ -1,16 +1,27 @@
-// Objects of all the form boxes and the enter button
-const nameBox = document.getElementById('nameBox');
-const emailBox = document.getElementById('emailBox');
-const contentBox = document.getElementById('contentBox');
 const enterButton = document.getElementById('enterButton');
-const allBoxes = [nameBox, emailBox, contentBox];
+const errorMsg = document.getElementById('errorMsg');
 
-/** 
- * Consists of sending a POST request and a GET request to the main database 
- */
-async function update_timeline() {
-    await POST_timeline_posts();
-    await GET_timeline_posts();
+// Functions that check if the form boxes are valid
+function validName(name){
+    return name.length !== 0;
+}
+function validEmail(email) {
+    return email.match(/\S+@\S+\.\S+/);
+};
+function validContent(content){
+    return content.length !== 0;
+}
+
+// Handling errors
+function createErrorMsg(msg){
+    if(errorMsg.innerHTML.length === 0){
+        errorMsg.innerHTML = "Error(s): " + msg;
+    } else {
+        errorMsg.innerHTML += " " + msg;
+    }
+}
+function clearErrorMsg(){
+    errorMsg.innerHTML = "";
 }
 
 /**
@@ -41,16 +52,16 @@ async function GET_timeline_posts() {
 /**
  * Saves the current form to the database via a POST request.
  */
-async function POST_timeline_posts() {
+async function POST_timeline_posts(name, email, content) {
     await fetch("/api/timeline_post", {
         method: "POST",
         headers:{
             'Content-Type': 'application/x-www-form-urlencoded'
         },    
         body: new URLSearchParams({
-            'name': nameBox.value,
-            'email': emailBox.value,
-            'content': contentBox.value
+            'name': name,
+            'email': email,
+            'content': content
         })
     });
 }
@@ -58,9 +69,34 @@ async function POST_timeline_posts() {
 /**
  * Updates the timeline and clears all text on the form
  */
-async function enterAction() {    
-    await update_timeline();
-    allBoxes.map(function(e){e.value= "";});
+async function enterAction() {
+    const nameValue = document.getElementById('nameBox').value;
+    const emailValue = document.getElementById('emailBox').value;
+    const contentValue = document.getElementById('contentBox').value;
+    const allValues = [nameValue, emailValue, contentValue];
+
+    clearErrorMsg();
+    let valid = true;
+
+    if(!validName(nameValue)){
+        createErrorMsg("Name cannot be empty.");
+        valid = false;
+    }
+    if(!validEmail(emailValue)){
+        createErrorMsg("Email has an invalid format.");
+        valid = false;
+    }
+    if(!validContent(contentValue)) {
+        createErrorMsg("Content cannot be empty.");
+        valid = false;
+    }
+
+    if(valid){
+        await POST_timeline_posts(nameValue, emailValue, contentValue);
+        await GET_timeline_posts();
+
+        allValues.map(function(e){e="";});
+    }
 }
 
 async function main() {
