@@ -63,7 +63,12 @@ async function POST_timeline_posts(name, email, content) {
             'email': email,
             'content': content
         })
-    });
+    }).then( res => {
+          if(res.status == 429) {
+              createErrorMsg("No post spamming. Please wait 1 minute to produce another post.")
+          }
+        }
+    );
 }
 
 /**
